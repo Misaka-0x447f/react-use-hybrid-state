@@ -12,4 +12,7 @@ module.exports = {
       isolatedModules: true,
     },
   },
+  transform: {
+    "^.+\\.[t|j]sx?$": "babel-jest"
+  },
 };

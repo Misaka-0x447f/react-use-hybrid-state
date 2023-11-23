@@ -26,7 +26,15 @@ module.exports = {
     'node/no-unpublished-import': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': ['error', {
+      'ts-expect-error': 'allow-with-description',
+      'ts-ignore': true,
+      'ts-nocheck': true,
+      'ts-check': false,
+      minimumDescriptionLength: 3,
+    }],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', {varsIgnorePattern: '^_+$', argsIgnorePattern: '^_+$'}],
+    '@typescript-eslint/no-unsafe-call': 'off'
   },
 };
